@@ -20,3 +20,5 @@ Propietario e inquilino como entidades separadas. Se modelaron así porque el de
 Restricciones de integridad a considerar: una propiedad no puede tener dos contratos de alquiler con períodos solapados; fecha_fin posterior a fecha_inicio; el propietario de una propiedad no debería figurar como inquilino de su propio inmueble; UNIQUE sobre (Id_Contrato, periodo_abonado) para que no se registre dos veces el mismo mes; y recargo_mora mayor a cero solo cuando la fecha de pago supera el vencimiento del período.
 
 Resultado
+<img width="4800" height="2430" alt="BaseDeDatos-U2-Ej16-Inmobiliaria" src="https://github.com/user-attachments/assets/d099ebcb-8456-49b2-8e42-3fe7346d7295" />
+

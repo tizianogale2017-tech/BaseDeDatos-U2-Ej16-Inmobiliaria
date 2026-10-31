@@ -25,3 +25,25 @@ Modelar el sistema centralizado de una inmobiliaria: cartera de propiedades con 
 ## Resultado
 
 ![Diagrama](captura.png)
+
+---
+
+## Normalización
+
+Se normaliza el documento `Contrato` con sus registros de `Pago`. En todas las tablas la PK va en la primera columna y las FK al final. Los datos son de ejemplo.
+
+**Forma 0.** Una sola tabla con todo junto. Hay celdas con listas: cada contrato puede tener varios registros de pago.
+
+![Forma 0](normalizacion/00-forma-0.png)
+
+**1FN.** Cada elemento de la lista pasa a su propia fila y la clave queda compuesta: (`id_contrato`, `id_pago`).
+
+![1FN](normalizacion/01-1fn.png)
+
+**2FN.** Los datos de contrato dependen solo de `id_contrato`, así que van a `Contrato`. `Pago` queda aparte con su propio id y la FK a `Contrato`.
+
+![2FN](normalizacion/02-2fn.png)
+
+**3FN.** Los datos de `Propiedad`, `Inquilino`, `Empleado` y `Propietario` dependen de su propio identificador y no de la PK de contrato, así que pasan a tablas aparte. En el modelo final cada tabla usa su id propio.
+
+![3FN](normalizacion/03-3fn.png)

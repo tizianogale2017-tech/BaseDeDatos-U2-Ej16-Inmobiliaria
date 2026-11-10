@@ -47,3 +47,9 @@ Se normaliza el documento `Contrato` con sus registros de `Pago`. En todas las t
 **3FN.** Los datos de `Propiedad`, `Inquilino`, `Empleado` y `Propietario` dependen de su propio identificador y no de la PK de contrato, así que pasan a tablas aparte. En el modelo final cada tabla usa su id propio.
 
 ![3FN](normalizacion/03-3fn.png)
+
+---
+
+## SQL
+
+El script `script.sql` crea las tablas con sus claves primarias y foráneas y carga datos de ejemplo. Está probado en SQLite (con `PRAGMA foreign_keys = ON;`).
